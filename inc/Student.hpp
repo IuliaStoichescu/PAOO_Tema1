@@ -22,7 +22,7 @@ namespace Student
        float calculateTotal();
 
        std::string getName() const; //incapsulare
-       int getGrade() const; //incapsulare
+       int getID() const; //incapsulare
     };
 }
 
