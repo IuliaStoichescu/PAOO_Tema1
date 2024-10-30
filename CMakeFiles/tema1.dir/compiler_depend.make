@@ -253,6 +253,7 @@ CMakeFiles/tema1.dir/Student.cpp.o: /home/iuli25/PAOO/PAOO_Tema1/src/Student.cpp
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -289,6 +290,8 @@ CMakeFiles/tema1.dir/Student.cpp.o: /home/iuli25/PAOO/PAOO_Tema1/src/Student.cpp
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -559,6 +562,10 @@ CMakeFiles/tema1.dir/main.cpp.o: /home/iuli25/PAOO/PAOO_Tema1/src/main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 
+/usr/include/string.h:
+
+/usr/include/c++/13/cstring:
+
 /home/iuli25/PAOO/PAOO_Tema1/src/Student.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
@@ -630,6 +637,8 @@ CMakeFiles/tema1.dir/main.cpp.o: /home/iuli25/PAOO/PAOO_Tema1/src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 

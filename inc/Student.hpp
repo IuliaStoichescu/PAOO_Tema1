@@ -7,20 +7,20 @@
     class Student
     {
        private : 
-       std::string name; 
+       char* name; 
        int id;
-       int* grades;
-       int nrgrades;
+       std::vector<float> grades;
 
        public :
-       Student(const std::string& name,int id,int nrgrades);
+       Student(const char* name,int id);
+       Student(const Student& other);//copy constructor
        ~Student();
 
        void addGrades(float grade);
        void showGrades();
        float calculateTotal();
 
-       std::string getName() const; //incapsulare
+       char* getName()const; //incapsulare
        int getID() const; //incapsulare
     };
 

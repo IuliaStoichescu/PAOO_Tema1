@@ -2,21 +2,31 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <cstring>
+
 using namespace std;
 
 
-        Student::Student(const string& name, int id,int nrgrades):name(name),id(id),nrgrades(nrgrades)
+        Student::Student(const char* nameInit, int id):id(id)
         {
-           grades = new int[nrgrades];//dinamic memory for the student grades
-           fill(grades,grades+nrgrades,0);//initialize all gradees with 0
+            //alocam dinamic spatiu, constructor simplu
+           name = new char[strlen(nameInit)+1];
+           strcpy(name,nameInit);
+        }
+
+        Student::Student(const Student &other):id(id)
+        {
+            //aloca memorie si se copiaza datele astfel incat fiecare obiect sa fie o copie a codului sursa
+            name = new char[strlen(other.name) + 1];//
+            strcpy(name, other.name);
         }
 
         Student::~Student()
         {
-            delete[] grades;
+            delete[] name;
         }
 
-        string Student::getName()const
+        char* Student::getName()const
         {
             return name;
         }
@@ -28,19 +38,15 @@ using namespace std;
 
         void Student::addGrades(float grade)
         {
-            //grades.push_back(grade);
-            if(nrgrades>0)
-            {
-                grades[nrgrades-1]=grade;
-            }
+            grades.push_back(grade);
         }
 
         void Student::showGrades()
         {
             cout<<"Grades of "<<name<<" with ID "<<id<<" are:"<<endl;
-            for(float g ;g<nrgrades;g++)
+            for(auto i : grades)
             {
-                cout<<g<<" ";
+                cout<<i<<" ";
             }
             cout<<endl;
         }
@@ -48,15 +54,18 @@ using namespace std;
         float Student::calculateTotal()
         {
             float media = 0.0;
-            if(nrgrades=0) return 0.0;
+            if(grades.empty()) 
+            {
+                return 0.0;
+            }
             else 
             {
-                for(int i=0;i<nrgrades;i++)
+                for(auto i : grades)
                 {
-                    media+=grades[i];
+                    media+=i;
                 }
             }
-            return static_cast<double>(media)/nrgrades;
+            return media/grades.size();
         }
 
 

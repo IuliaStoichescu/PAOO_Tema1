@@ -22,7 +22,7 @@ int main()
          case 0: return 0;
          case 1: 
          {
-               string name;
+               char name[100];
                int id;
                int nr;
                int nrgrades;
@@ -31,10 +31,10 @@ int main()
                cout<<"ID: ";
                cin>>id;
                cout<<endl;
-               Student student(name,id,nrgrades);
+               Student student(name,id);
                cout<<"Number of grades: ";
-               cin>>nrgrades;
-               for(auto i = 0;i<nrgrades;i++)
+               cin>>nr;
+               for(auto i = 0;i<nr;i++)
                {
                   float grade;
                   cout<<"Add grade: ";
@@ -43,7 +43,7 @@ int main()
                   student.addGrades(grade);
                }
                cout<<endl;
-               student.calculateTotal();
+               //student.calculateTotal();
                ms.addStudents(student);
                break;
          }
