@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/iuli25/PAOO/PAOO_Tema1/src/ManageStudents.cpp" "CMakeFiles/tema1.dir/ManageStudents.cpp.o" "gcc" "CMakeFiles/tema1.dir/ManageStudents.cpp.o.d"
+  "/home/iuli25/PAOO/PAOO_Tema1/src/Student.cpp" "CMakeFiles/tema1.dir/Student.cpp.o" "gcc" "CMakeFiles/tema1.dir/Student.cpp.o.d"
   "/home/iuli25/PAOO/PAOO_Tema1/src/main.cpp" "CMakeFiles/tema1.dir/main.cpp.o" "gcc" "CMakeFiles/tema1.dir/main.cpp.o.d"
   )
 

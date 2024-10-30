@@ -1,15 +1,19 @@
-#include "../inc/Student.hpp";
+#include "../inc/Student.hpp"
 #include <string>
 #include <vector>
 #include <iostream>
 using namespace std;
 
-namespace Student
-{
-        Student::Student(const string& n, int i)
+
+        Student::Student(const string& name, int id,int nrgrades):name(name),id(id),nrgrades(nrgrades)
         {
-            name=n;
-            id=i;
+           grades = new int[nrgrades];//dinamic memory for the student grades
+           fill(grades,grades+nrgrades,0);//initialize all gradees with 0
+        }
+
+        Student::~Student()
+        {
+            delete[] grades;
         }
 
         string Student::getName()const
@@ -22,15 +26,19 @@ namespace Student
             return id;
         }
 
-        void Student::addGrades(int grade)
+        void Student::addGrades(float grade)
         {
-            grades.push_back(grade);
+            //grades.push_back(grade);
+            if(nrgrades>0)
+            {
+                grades[nrgrades-1]=grade;
+            }
         }
 
         void Student::showGrades()
         {
             cout<<"Grades of "<<name<<" with ID "<<id<<" are:"<<endl;
-            for(float g : grades)
+            for(float g ;g<nrgrades;g++)
             {
                 cout<<g<<" ";
             }
@@ -40,21 +48,15 @@ namespace Student
         float Student::calculateTotal()
         {
             float media = 0.0;
-            int size=0;
-            float sum=0.0;
-            if(grades.empty())
+            if(nrgrades=0) return 0.0;
+            else 
             {
-                media = 0.0;
-            }
-            else
-            {
-                for(float g : grades)
+                for(int i=0;i<nrgrades;i++)
                 {
-                    sum+=g;
+                    media+=grades[i];
                 }
             }
-            media = sum/grades.size();
-            return media;
+            return static_cast<double>(media)/nrgrades;
         }
-}
+
 

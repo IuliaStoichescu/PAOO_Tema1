@@ -10,6 +10,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON) #we request cmake to verify the compiler
 
 set(CMAKE_CXX_EXTENSIONS OFF) #we request -std=c++14 in the compiler frags instead of --std=gnuc++14
  
-set(myfiles src/main.cpp)
+set(myfiles src/main.cpp src/Student.cpp src/ManageStudents.cpp inc/Student.hpp inc/ManageStudents.hpp)
 
 add_executable(${myproject} ${myfiles})

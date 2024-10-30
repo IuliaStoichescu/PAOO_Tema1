@@ -129,6 +129,54 @@ tema1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/build
 .PHONY : tema1/fast
 
+ManageStudents.o: ManageStudents.cpp.o
+.PHONY : ManageStudents.o
+
+# target to build an object file
+ManageStudents.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/ManageStudents.cpp.o
+.PHONY : ManageStudents.cpp.o
+
+ManageStudents.i: ManageStudents.cpp.i
+.PHONY : ManageStudents.i
+
+# target to preprocess a source file
+ManageStudents.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/ManageStudents.cpp.i
+.PHONY : ManageStudents.cpp.i
+
+ManageStudents.s: ManageStudents.cpp.s
+.PHONY : ManageStudents.s
+
+# target to generate assembly for a file
+ManageStudents.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/ManageStudents.cpp.s
+.PHONY : ManageStudents.cpp.s
+
+Student.o: Student.cpp.o
+.PHONY : Student.o
+
+# target to build an object file
+Student.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Student.cpp.o
+.PHONY : Student.cpp.o
+
+Student.i: Student.cpp.i
+.PHONY : Student.i
+
+# target to preprocess a source file
+Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Student.cpp.i
+.PHONY : Student.cpp.i
+
+Student.s: Student.cpp.s
+.PHONY : Student.s
+
+# target to generate assembly for a file
+Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/Student.cpp.s
+.PHONY : Student.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tema1"
+	@echo "... ManageStudents.o"
+	@echo "... ManageStudents.i"
+	@echo "... ManageStudents.s"
+	@echo "... Student.o"
+	@echo "... Student.i"
+	@echo "... Student.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

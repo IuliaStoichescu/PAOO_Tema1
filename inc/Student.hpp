@@ -4,26 +4,24 @@
 #include <string>
 #include <vector>
 
-namespace Student
-{
     class Student
     {
        private : 
        std::string name; 
        int id;
-       std::vector<float> grades;
+       int* grades;
+       int nrgrades;
 
        public :
-       Student(const std::string& name,int id);
-       ~Student() = default;
+       Student(const std::string& name,int id,int nrgrades);
+       ~Student();
 
-       void addGrades(int grade);
+       void addGrades(float grade);
        void showGrades();
        float calculateTotal();
 
        std::string getName() const; //incapsulare
        int getID() const; //incapsulare
     };
-}
 
 #endif
