@@ -6,27 +6,70 @@
 
 using namespace std;
 
-
-        Student::Student(const char* nameInit, int id):id(id)
+        //Normal constructor, used for creating objects
+        Student::Student(std::string &name, int id)
         {
-            //alocam dinamic spatiu, constructor simplu
-           name = new char[strlen(nameInit)+1];
-           strcpy(name,nameInit);
+            this->name = name;
+            this->id=id;
         }
 
-        Student::Student(const Student &other):id(id)
+        //Copy constructor , member function that initializez an object using another object of the same class
+        Student::Student(const Student &other):name(other.name),id(other.id),grades(other.grades)
         {
-            //aloca memorie si se copiaza datele astfel incat fiecare obiect sa fie o copie a codului sursa
-            name = new char[strlen(other.name) + 1];//
-            strcpy(name, other.name);
+            cout<<"Copy constructor was called "<<endl;
+            //we put grades here to ensure that the students object has all the corrected data at copy
         }
 
+        //Copy assignment operator
+        Student& Student::operator=(Student& other) 
+        {
+            if (this == &other) 
+            {
+                return *this; // handle self-assignment
+            }
+
+            name = other.name;       
+            id = other.id;           
+            grades = other.grades;   
+            std::cout << "Copy assignment operator was called\n";
+            
+            return *this;
+        }
+
+        Student::Student(Student&& other) noexcept : name(move(other.name)),id(move(other.id)),grades(move(other.grades))
+        {
+             cout<<"Move constructor was called "<<endl;   
+             other.id=0;//resets the id to invalid/empty state
+        }
+
+        //Move assignment operator
+        Student& Student::operator=(Student&& other) noexcept
+        {
+            if (this == &other) 
+            {
+                return *this; // handle self-assignment
+            }
+
+            name = move(other.name);       
+            id = move(other.id);           
+            grades = move(other.grades);   
+            std::cout << "Move assignment operator was called\n";
+
+            other.name="";
+            other.id=0;
+            other.grades.clear();
+
+            return *this;
+        }
+
+        //Deconstructor
         Student::~Student()
         {
-            delete[] name;
+           // delete[] &name,id;
+           cout<<"Student object was destroyed"<<endl;
         }
 
-        char* Student::getName()const
+        string Student::getName()const
         {
             return name;
         }

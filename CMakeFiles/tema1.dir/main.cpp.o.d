@@ -144,9 +144,8 @@ CMakeFiles/tema1.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/iuli25/PAOO/PAOO_Tema1/src/../inc/ManageStudents.hpp \
+ /home/iuli25/PAOO/PAOO_Tema1/src/../inc/Student.hpp \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc \
- /home/iuli25/PAOO/PAOO_Tema1/src/../inc/Student.hpp
+ /usr/include/c++/13/bits/vector.tcc

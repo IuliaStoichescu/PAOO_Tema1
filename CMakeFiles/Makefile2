@@ -81,12 +81,12 @@ clean: CMakeFiles/tema1.dir/clean
 CMakeFiles/tema1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1.dir/build.make CMakeFiles/tema1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/iuli25/PAOO/PAOO_Tema1/CMakeFiles --progress-num=1,2,3,4 "Built target tema1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/iuli25/PAOO/PAOO_Tema1/CMakeFiles --progress-num=1,2,3 "Built target tema1"
 .PHONY : CMakeFiles/tema1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tema1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/iuli25/PAOO/PAOO_Tema1/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/iuli25/PAOO/PAOO_Tema1/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tema1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/iuli25/PAOO/PAOO_Tema1/CMakeFiles 0
 .PHONY : CMakeFiles/tema1.dir/rule

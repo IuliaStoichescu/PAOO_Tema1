@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/tema1.dir/main.cpp.o CMakeFiles/tema1.dir/Student.cpp.o CMakeFiles/tema1.dir/ManageStudents.cpp.o -o tema1 
+/usr/bin/c++ -rdynamic CMakeFiles/tema1.dir/main.cpp.o CMakeFiles/tema1.dir/Student.cpp.o -o tema1 
